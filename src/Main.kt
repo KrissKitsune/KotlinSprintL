@@ -2,6 +2,6 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     val webOrder:Int = readln().toInt()
-    val reviewOfTheOrder =readln()
+    val reviewOfTheOrder: String =readln()
     println("Отзыв к заказу №$webOrder: $reviewOfTheOrder")
 }
