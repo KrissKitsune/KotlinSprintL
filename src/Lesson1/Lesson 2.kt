@@ -3,6 +3,6 @@ fun main() {
     val reviewOfTheOrder: String = readln()
     println("Отзыв к заказу №${webOrder}: $reviewOfTheOrder")
 
-    val numberOfEmployees = 2000
+    val numberOfEmployees = 1999
     println("Количество работников в магазине - $numberOfEmployees")
 }
