@@ -1,5 +1,8 @@
-package Lesson2
+fun main() {
+    val webOrder: Int = readln().toInt()
+    val reviewOfTheOrder: String = readln()
+    println("Отзыв к заказу №${webOrder}: $reviewOfTheOrder")
 
-fun main(){
-    println("Задание 2 тест")
+    val numberOfEmployees = 1998
+    println("Количество работников в магазине - $numberOfEmployees")
 }
