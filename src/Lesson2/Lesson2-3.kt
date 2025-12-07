@@ -1,15 +1,14 @@
 package Lesson2
-
+const val MULTIPLICITY_OF_TIME = 60
 fun main(){
     val hour = 9
     val minute = 39
-    val timetravel = 457
-    println("Время отбытия - $hour : $minute")
+    val timeTravel = 457
+    println("Время отбытия - ${String.format("%02d:%02d",hour,minute)}")
 
-    val timeLive = hour * 60 + minute
-    val timearrive =timeLive+timetravel
-    val arrivehour = timearrive/60
-    val arriveminute = timearrive%60
-    val time = String.format("%02d:%02d", arrivehour,arriveminute)
-    println("Время прибытия - $time")
+    val timeLive = (hour * MULTIPLICITY_OF_TIME) + minute
+    val timeArrive =timeLive + timeTravel
+    val arriveHour = timeArrive / MULTIPLICITY_OF_TIME
+    val arriveMinute = timeArrive % MULTIPLICITY_OF_TIME
+    println("Время прибытия - ${String.format("%02d:%02d", arriveHour,arriveMinute)}")
 }
