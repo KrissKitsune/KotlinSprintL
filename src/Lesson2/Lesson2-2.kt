@@ -5,13 +5,13 @@ fun main() {
     val interns = 30
     val workersSalary = 30_000
     val internsSalary = 20_000
-    val ExpSalaryWorkers = workersSalary * workers
-    val TotalExpence = ExpSalaryWorkers + interns * internsSalary
-    val MiddleSalary = TotalExpence / (workers + interns)
+    val expSalaryWorkers = workersSalary * workers
+    val totalExpense = expSalaryWorkers + interns * internsSalary
+    val middleSalary = totalExpense / (workers + interns)
     println(
         """
-     |Зарплата постоянных сотрудников: ${ExpSalaryWorkers} ,
-     |общий расход: ${TotalExpence},
-     |средняя зарплата: ${MiddleSalary}""".trimMargin()
+     |Зарплата постоянных сотрудников: ${expSalaryWorkers},
+     |общий расход: ${totalExpense},
+     |средняя зарплата: $middleSalary""".trimMargin()
     )
 }
