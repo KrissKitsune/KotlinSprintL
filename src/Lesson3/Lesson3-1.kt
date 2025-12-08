@@ -2,10 +2,10 @@ package Lesson3
 
 fun main() {
 
-    val name = "Пользователь"
-    var time = "Доброе утро!"
-    println("$time $name, отличного настроения!")
+    val nameUser = "Пользователь"
+    var timeOfDay = "Доброе утро!"
+    println("$timeOfDay $nameUser, отличного настроения!")
 
-    time = "Добрый вечер!"
-    println("$time $name, отличного настроения!")
+    timeOfDay = "Добрый вечер!"
+    println("$timeOfDay $nameUser, отличного настроения!")
 }
