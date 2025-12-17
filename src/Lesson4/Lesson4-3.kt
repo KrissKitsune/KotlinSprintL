@@ -1,12 +1,20 @@
 package Lesson4
 
+const val SUNNY_CONDITIONS_FOR_LEGUMES = true
+const val TENT_IS_OPENED_FOR_LEGUMES = true
+const val AIR_HUMIDITY_FOR_LEGUMES = 20
+const val SEASON_FOR_LEGUMES = "весна,лето,осень"
+
 fun main() {
-    val sunnyToday: Boolean = true
-    val tentIsOpened: Boolean = true
-    val airHumidity: Int = 20
-    val season: String = "зима"
+    val sunnyToday = true
+    val tentIsOpened = true
+    val airHumidityToday = 20
+    val seasonToday = "зима"
+    val listOfNeedSeasonForLegumes = SEASON_FOR_LEGUMES.split(",")
 
-    val suitableСonditions = sunnyToday && tentIsOpened && (airHumidity == 20) && (season != "зима")
+    val suitableConditions =
+        (sunnyToday == SUNNY_CONDITIONS_FOR_LEGUMES) && (tentIsOpened == TENT_IS_OPENED_FOR_LEGUMES)
+                && (airHumidityToday == AIR_HUMIDITY_FOR_LEGUMES) && (listOfNeedSeasonForLegumes.contains(seasonToday))
 
-    println("Благоприятные ли условия сейчас для роста бобовых? $suitableСonditions")
+    println("Благоприятные ли условия сейчас для роста бобовых? $suitableConditions")
 }
