@@ -2,13 +2,11 @@ package Lesson4
 
 fun main() {
     val exercisesDay = 5
-    val isDayEven = exercisesDay % 2 == 0
 
-    val exercisesLegs = isDayEven
-    val exercisesHands = !isDayEven
-    val exercisesBack = isDayEven
-    val exercisesBelly = !isDayEven
-
+    val exercisesLegs = exercisesDay % 2 == 0
+    val exercisesHands = !(exercisesDay % 2 == 0)
+    val exercisesBack = exercisesDay % 2 == 0
+    val exercisesBelly = !(exercisesDay % 2 == 0)
     println(
         """ 
          |День тренировок - $exercisesDay!
