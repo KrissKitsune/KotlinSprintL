@@ -2,6 +2,7 @@ package Lesson4
 
 const val MAX_CREW = 70
 const val MIN_CREW = 55
+const val MIN_BOXES_OF_FOOD = 50
 fun main() {
 
     val numOfCrew: Int
@@ -21,7 +22,7 @@ fun main() {
     print("Благоприятная ли погода для плавания? Введите true или false ")
     isTheWeatherNice = readln().toBoolean()
 
-    permissionToCruise = (!isShipDamaged && (numOfCrew in MIN_CREW..MAX_CREW) && (boxesOfFood > 50)) ||
-            (isShipDamaged && (numOfCrew == MAX_CREW) && (boxesOfFood >= 50) && isTheWeatherNice)
+    permissionToCruise = (!isShipDamaged && (numOfCrew in MIN_CREW..MAX_CREW) && (boxesOfFood > MIN_BOXES_OF_FOOD)) ||
+            (isShipDamaged && (numOfCrew == MAX_CREW) && (boxesOfFood >= MIN_BOXES_OF_FOOD) && isTheWeatherNice)
     println("Разрешение на долгосрочное плавание: $permissionToCruise")
 }
