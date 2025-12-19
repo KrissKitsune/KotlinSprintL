@@ -1,10 +1,8 @@
 package Lesson5
 
-import kotlin.random.Random
-
 fun main() {
-    val randomNum1 = (Random.Default).nextInt(11)
-    val randomNum2 = (Random.Default).nextInt(11)
+    val randomNum1 = (1..10).random()
+    val randomNum2 = (1..10).random()
     print("Докажите, что вы не бот.\nРешите уравнение: $randomNum1 + $randomNum2 = ")
 
     val enteredTotal = readln().toInt()
