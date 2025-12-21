@@ -1,28 +1,29 @@
 package Lesson5
 
 import kotlin.system.exitProcess
+const val MIN_WIN_NUM = 0
+const val MAX_WIN_NUM = 42
 
 fun main() {
-    val winFirstNum = (0..42).random()
-    val variableNum = (0..42).random()
-    //дальше блок кода, чтобы генерировались разные числа, чтобы сверка коллекций была релевантной
+    val winFirstNum = (MIN_WIN_NUM..MAX_WIN_NUM).random()
+    val variableNum = (MIN_WIN_NUM..MAX_WIN_NUM).random()
     val winSecondNum = if (winFirstNum != variableNum) {
         variableNum
-    } else (0..42).random()
+    } else (MIN_WIN_NUM..MAX_WIN_NUM).random()
     val winThirdNum = if ((winFirstNum != variableNum) && (winSecondNum != variableNum)) {
         variableNum
-    } else (0..42).random()
+    } else (MIN_WIN_NUM..MAX_WIN_NUM).random()
 
     println("Вы участвуете в лотерее! Вам нужно ввести три разных числа в диапазоне от 0 до 42!\n Ваше первое число? ")
     val userFirstNum = readln().toInt()
-    if (userFirstNum !in 0..42) {
+    if (userFirstNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
         println("Вы ввели $userFirstNum, оно не в диапазоне от 0 до 42!")
         exitProcess(1)
     }
 
     println("Число принято!\n Ваше второе число? ")
     var userSecondNum = readln().toInt()
-    if (userSecondNum !in 0..42) {
+    if (userSecondNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
         println("Вы ввели ${userSecondNum}, оно не в диапазоне от 0 до 42!")
         exitProcess(1)
     } else if (userFirstNum != userSecondNum) {
@@ -34,7 +35,7 @@ fun main() {
 
     println("Ваше третье число? ")
     var userThirdNum = readln().toInt()
-    if (userThirdNum !in 0..42) {
+    if (userThirdNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
         println("Вы ввели ${userThirdNum}, оно не в диапазоне от 0 до 42!")
         exitProcess(1)
     } else if ((userThirdNum != userFirstNum) && (userThirdNum != userSecondNum)) {
@@ -46,10 +47,8 @@ fun main() {
     val listWinNum = listOf(winFirstNum, winSecondNum, winThirdNum)
     val listUsersNum = listOf(userFirstNum, userSecondNum, userThirdNum)
 
-    val matchesNum = listWinNum.intersect(listUsersNum.toSet()) //сравнение списков
-    //println(matchesNum) //коллекция с числами, которые совпали
+    val matchesNum = listWinNum.intersect(listUsersNum.toSet())
     val matchesCount = matchesNum.count()
-    //println(matchesCount) //проверка счетчика элементов массива с совпадениями
 
     val resultText = when (matchesCount) {
         3 -> "Вы выйграли и получаете ДЖЕКПОТ!"
@@ -59,5 +58,5 @@ fun main() {
     }
     println(resultText)
 
-    println("А вот числа для победы в лотерее: ${winFirstNum}, ${winSecondNum}, $winThirdNum") //проверка рандомных чисел для выйгрыша
+    println("А вот числа для победы в лотерее: ${winFirstNum}, ${winSecondNum}, $winThirdNum")
 }
