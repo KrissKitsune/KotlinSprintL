@@ -14,17 +14,17 @@ fun main() {
         variableNum
     } else (MIN_WIN_NUM..MAX_WIN_NUM).random()
 
-    println("Вы участвуете в лотерее! Вам нужно ввести три разных числа в диапазоне от 0 до 42!\n Ваше первое число? ")
+    println("Вы участвуете в лотерее! Вам нужно ввести три разных числа в диапазоне от $MIN_WIN_NUM до $MAX_WIN_NUM !\n Ваше первое число? ")
     val userFirstNum = readln().toInt()
     if (userFirstNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
-        println("Вы ввели $userFirstNum, оно не в диапазоне от 0 до 42!")
+        println("Вы ввели $userFirstNum, оно не в диапазоне от $MIN_WIN_NUM до $MAX_WIN_NUM !")
         exitProcess(1)
     }
 
     println("Число принято!\n Ваше второе число? ")
     var userSecondNum = readln().toInt()
     if (userSecondNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
-        println("Вы ввели ${userSecondNum}, оно не в диапазоне от 0 до 42!")
+        println("Вы ввели ${userSecondNum}, оно не в диапазоне от $MIN_WIN_NUM до $MAX_WIN_NUM !")
         exitProcess(1)
     } else if (userFirstNum != userSecondNum) {
         println("Число принято!")
@@ -36,7 +36,7 @@ fun main() {
     println("Ваше третье число? ")
     var userThirdNum = readln().toInt()
     if (userThirdNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
-        println("Вы ввели ${userThirdNum}, оно не в диапазоне от 0 до 42!")
+        println("Вы ввели ${userThirdNum}, оно не в диапазоне от $MIN_WIN_NUM до $MAX_WIN_NUM !")
         exitProcess(1)
     } else if ((userThirdNum != userFirstNum) && (userThirdNum != userSecondNum)) {
         println("Число принято!")
