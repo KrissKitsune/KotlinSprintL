@@ -10,17 +10,17 @@ const val MAX_WIN_NUM = 42
 fun main() {
 
     println(
-        "Вы участвуете в лотерее! Вам нужно ввести два числа в диапазоне от 0 до 42!\n Ваше первое число? "
+        "Вы участвуете в лотерее! Вам нужно ввести два числа в диапазоне от $MIN_WIN_NUM до $MAX_WIN_NUM !\n Ваше первое число? "
     )
     val userFirstNum = readln().toInt()
     if (userFirstNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
-        println("Вы ввели ${userFirstNum}, оно не в диапазоне от 0 до 42!")
+        println("Вы ввели ${userFirstNum}, оно не в диапазоне от $MIN_WIN_NUM до $MAX_WIN_NUM !")
         exitProcess(1)
     }
     println("Ваше второе число? ")
     val userSecondNum = readln().toInt()
     if (userSecondNum !in MIN_WIN_NUM..MAX_WIN_NUM) {
-        println("Вы ввели ${userSecondNum}, оно не в диапазоне от 0 до 42!")
+        println("Вы ввели ${userSecondNum}, оно не в диапазоне от $MIN_WIN_NUM до $MAX_WIN_NUM !")
         exitProcess(1)
     }
 
